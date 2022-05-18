@@ -18,6 +18,8 @@ jobs:
           node-version: ${{ matrix.node }}
       - run: npm ci
       - run: npm install --save-dev nyc
+      - run: sudo apt-get update
+      - run: sudo apt-get install luarocks
       - run: luarocks install luacov-coveralls
       - run: lua -lluacov -o ./coverage/lcov.info
       - run: luacov-coveralls
