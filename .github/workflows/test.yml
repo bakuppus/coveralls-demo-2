@@ -8,7 +8,7 @@ jobs:
     timeout-minutes: 5
     strategy:
       matrix:
-        node: [ '15', '16' ]
+        node: [ '16' ]
     name: Node ${{ matrix.node }} test
     steps:
       - uses: actions/checkout@v3
@@ -18,7 +18,7 @@ jobs:
           node-version: ${{ matrix.node }}
       - run: npm ci
       - run: npm install --save-dev nyc
-      - run: npm test
+      - run: npm run test:report
 
       - name: Coveralls Parallel
         uses: coverallsapp/github-action@master

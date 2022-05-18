@@ -20,7 +20,7 @@
 		"url": "https://github.com/samclarke/robots-parser/issues"
 	},
 	"scripts": {
-		"test": "nyc mocha"
+		"test:report": "nyc report --reporter=lcov"
 	},
 	"repository": {
 		"type": "git",
