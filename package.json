@@ -2,23 +2,6 @@
 	"name": "robots-parser",
 	"version": "3.0.0",
 	"description": "A specification compliant robots.txt parser with wildcard (*) matching support.",
-	"keywords": [
-		"robots.txt",
-		"parser",
-		"user-agent",
-		"scraper",
-		"spider",
-		"bot",
-		"robots-exclusion-standard"
-	],
-	"main": "index.js",
-	"directories": {
-		"test": "tests"
-	},
-	"homepage": "https://github.com/samclarke/robots-parser",
-	"bugs": {
-		"url": "https://github.com/samclarke/robots-parser/issues"
-	},
 	"scripts": {
 		"test:report": "nyc --reporter=text-summary --reporter=html --reporter=lcovonly mocha"
 	},
@@ -36,7 +19,6 @@
 		"/LICENSE.md",
 		"/CHANGELOG.md",
 		"/SECURITY.md",
-		"test/*.js",
 		".gitignore"
 	],
 	"engines": {
