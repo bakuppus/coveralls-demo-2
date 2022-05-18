@@ -18,7 +18,9 @@ jobs:
           node-version: ${{ matrix.node }}
       - run: npm ci
       - run: npm install --save-dev nyc
-      - run: npm run test:report
+      - run: luarocks install luacov-coveralls
+      - run: lua -lluacov -o ./coverage/lcov.info
+      - run: luacov-coveralls
 
       - name: Coveralls Parallel
         uses: coverallsapp/github-action@master
