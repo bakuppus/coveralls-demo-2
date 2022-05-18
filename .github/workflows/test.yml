@@ -21,7 +21,7 @@ jobs:
       - run: sudo apt-get update
       - run: sudo apt-get install luarocks
       - run: sudo luarocks install luacov-coveralls
-      - run: sudo lua -lluacov -o ./coverage/lcov.info
+      - run: sudo lua -lluacov test.lua
       - run: sudo luacov-coveralls
 
       - name: Coveralls Parallel
