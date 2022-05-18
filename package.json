@@ -3,7 +3,7 @@
 	"version": "3.0.0",
 	"description": "A specification compliant robots.txt parser with wildcard (*) matching support.",
 	"scripts": {
-		"test:report": "nyc --reporter=text-summary --reporter=html --reporter=lcovonly mocha"
+		"test:report": "echo no test specified && exit 1"
 	},
 	"repository": {
 		"type": "git",

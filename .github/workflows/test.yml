@@ -17,12 +17,9 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: npm ci
-      - run: npm install --save-dev nyc
-      - run: sudo apt-get update
-      - run: sudo apt-get install luarocks
-      - run: sudo luarocks install luacov-coveralls
-      - run: sudo lua -lluacov test.lua
-      - run: sudo luacov-coveralls
+      - run: npm run test:report
+
+
 
       - name: Coveralls Parallel
         uses: coverallsapp/github-action@master
